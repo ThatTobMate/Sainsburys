@@ -1,0 +1,51 @@
+<html ng-app="sainsburysApp">
+<head>
+  <meta charset="UTF-8">
+  <title>Sainsburys Photo Test</title>
+  <link rel="stylesheet" href="stylesheets/test1.css">
+  <link rel="stylesheet" href="bower_components/angular-material/angular-material.css">
+
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-resource/angular-resource.js"></script>
+  <script src="bower_components/angular-aria/angular-aria.js"></script>
+  <script src="bower_components/angular-animate/angular-animate.js"></script>
+  <script src="bower_components/angular-material/angular-material.js"></script>
+  <script src="bower_components/underscore/underscore-min.js"></script>
+  <script src="scripts/underscore-angular.js"></script>
+  <script src="scripts/app.js"></script>
+  <script src="scripts/factories/PhotoFactory.js"></script>
+  <script src="scripts/controllers/PhotoController.js"></script>
+</head>
+<body ng-controller="PhotoCtrl">
+  
+  <div ng-cloak>
+    <md-content>
+      <md-tabs md-dynamic-height md-border-bottom>
+        <md-tab label="Photo Stream">
+          <md-content class="md-padding">
+            <div id="photos">
+              <img ng-repeat="photo in photoList" ng-click="toggleFavourite(photo)" ng-class="{selected: photo.favourite}" ng-src="{{ photo.media.m }}" alt="A photo">
+            </div>
+          </md-content>
+        </md-tab>
+        <md-tab label="Favourite Photos">
+          <md-content class="md-padding">
+           <div id="photos">
+             <img ng-repeat="photo in favouritePhotos" ng-click="removeFavourite(photo)" ng-src="{{ photo.media.m }}" alt="A photo">
+           </div>
+          </md-content>
+        </md-tab>
+        <md-tab label="Test 2">
+          <md-content class="md-padding">
+            <a href="test2-index.html">
+              Click For Test 2
+            </a>
+          </md-content>
+        </md-tab>
+      </md-tabs>
+    </md-content>
+  </div>
+  
+
+</body>
+</html>

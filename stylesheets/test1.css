@@ -1,0 +1,29 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+#photos {
+  /* Prevent vertical gaps */
+  line-height: 0;
+   
+  -webkit-column-count: 5;
+  -webkit-column-gap:   5px;
+  -moz-column-count:    5;
+  -moz-column-gap:      5px;
+  column-count:         5;
+  column-gap:           5px;  
+}
+
+#photos img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 5px;
+}
+
+.selected{
+  border: 3px dashed red;
+}

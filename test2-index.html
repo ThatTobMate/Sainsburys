@@ -1,0 +1,104 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Sainsburys CSS</title>
+  <link rel="stylesheet" href="stylesheets/test2.css">
+  <link rel="stylesheet" href="stylesheets/font-awesome.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="company">
+        <a href="index.html">
+          <img src="images/Sainsburys.jpg" alt="logo">
+          <h1 class="company-name">Click For Test 1</h1>
+        </a>
+      </div>
+      <ul class="pull-right hide-mobile">
+        <li><a href="#"><i class="fa fa-facebook-square fa-3x"></i></a></li>
+        <li><a href="#"><i class="fa fa-twitter-square fa-3x"></i></a></li>
+        <li><a href="#"><i class="fa fa-google-plus-square fa-3x"></i></a></li>
+      </ul>
+    </header>
+  
+    <div class="display-mobile">
+      <button id="menu">Menu</button>
+    </div>
+
+    <div class="navbar nav-mobile">
+      <ul class="navigation-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">eBooks</a></li>
+        <li><a href="#">Magazines</a></li>
+        <li><a href="#">Movies</a></li>
+        <li><a href="#">Help</a></li>
+        <li><a href="#">Login</a></li>
+      </ul>
+    </div>
+    
+
+    <section>
+      <div class="titles">
+        <h1>Lorem Ipsum Dolor Sit</h1>
+        <p>posted on 15 May 2015 by <span><a href="#">Author</a></span></p>
+      </div>
+      <div class="section-image">
+        <img src="images/jose.jpg" alt="image">
+      </div>
+      <div class="section-clearfix">
+        <div class="section-list">
+          <h3>More...</h3>
+          <ul>
+            <a href="#"><li>Link #1</li></a>
+            <a href="#"><li>Another link</li></a>
+            <a href="#"><li>Third link</li></a>
+          </ul>
+        </div>
+      
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat, corrupti repellendus nemo natus vel quod quasi recusandae? Cum deserunt, asperiores dolor voluptatum sed numquam dignissimos laborum cupiditate, autem iure omnis? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat, corrupti repellendus nemo natus vel quod quasi recusandae? Cum deserunt, asperiores dolor voluptatum sed numquam dignissimos laborum cupiditate, autem iure omnis? Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+        </p>
+        <p>
+          Placeat, corrupti repellendus nemo natus vel quod quasi recusandae? Cum deserunt, asperiores dolor voluptatum sed numquam dignissimos laborum cupiditate, autem iure omnis? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa dicta quas laudantium assumenda eligendi quo est qui.
+        </p>
+      </div>
+    </section>
+    <aside class="hide-mobile">
+      <a href="#">
+        <div class="titles">
+          <h3>A guide to snoopsetting</h3>
+        </div>
+        <img src="images/apple.jpg" alt="aside image">
+      </a>
+      <a href="#">
+        <div class="titles">
+          <h3>Welcome to the Surveillance State</h3>
+        </div>
+        <img src="images/apple.jpg" alt="aside image">
+      </a>
+    </aside>
+
+    <footer>
+      <ul class="display-mobile">
+        <li><a href="#"><i class="fa fa-facebook-square fa-3x"></i></a></li>
+        <li><a href="#"><i class="fa fa-twitter-square fa-3x"></i></a></li>
+        <li><a href="#"><i class="fa fa-google-plus-square fa-3x"></i></a></li>
+      </ul>
+    </footer>
+  </div>
+  <script>
+    var menuButton = document.getElementById('menu');
+
+    menuButton.onclick = toggleClass;
+
+    function toggleClass(){
+      var navbar = document.getElementsByClassName('navbar');
+      if(navbar[0].classList.contains('show')){
+        navbar[0].classList.remove("show");
+      }else{
+        navbar[0].classList.add("show");
+      }
+    };
+  </script>
+</body>
+</html>
